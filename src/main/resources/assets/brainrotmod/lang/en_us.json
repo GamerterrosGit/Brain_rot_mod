@@ -1,5 +1,10 @@
 {
   "item.brainrotmod.prime" : "Prime",
   "item.brainrotmod.cheese": "Cheese",
-  "item.brainrotmod.drippy_cheese": "Drippy Cheese"
+  "item.brainrotmod.drippy_cheese": "Drippy Cheese",
+  "item.brainrotmod.cheese_block": "Cheese Block",
+
+  "block.brainrotmod.cheese_block": "Cheese Block",
+
+  "itemgroup.brainrotmod.brainrot_items": "Brain Rot"
 }

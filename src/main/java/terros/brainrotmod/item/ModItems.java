@@ -23,10 +23,10 @@ public class ModItems {
     public static void registerModItems() {
         BrainRotMod.LOGGER.info("Registering Mod Items for " + BrainRotMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(PRIME);
-            entries.add(CHEESE);
-            entries.add(DRIPPY_CHEESE);
-        });
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+//            entries.add(PRIME);
+//            entries.add(CHEESE);
+//            entries.add(DRIPPY_CHEESE);
+//        });
     }
 }
