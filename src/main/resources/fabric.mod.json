@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "brain-rot-mod",
+	"id": "brainrotmod",
 	"version": "${version}",
 	"name": "Brain Rot Mod",
 	"description": "brainrot in mc?!??!",
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/brain-rot-mod/icon.png",
+	"icon": "assets/brainrotmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
