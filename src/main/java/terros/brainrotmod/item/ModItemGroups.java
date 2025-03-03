@@ -19,9 +19,14 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.brainrotmod.brainrot_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.CHEESE_BLOCK);
+                        entries.add(ModBlocks.CHEESE_SLAB);
+                        entries.add(ModBlocks.CHEESE_ORE_BLOCK);
+                        entries.add(ModBlocks.DEEPSLATE_CHEESE_ORE_BLOCK);
                         entries.add(ModItems.DRIPPY_CHEESE);
                         entries.add(ModItems.CHEESE);
+                        entries.add(ModItems.FEASTABLES);
                         entries.add(ModItems.PRIME);
+
                     })
             .build());
 

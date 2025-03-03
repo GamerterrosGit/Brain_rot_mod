@@ -1,12 +1,11 @@
 package terros.brainrotmod.block;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -21,6 +20,27 @@ public class ModBlocks {
             .strength(0.1f)
             .sounds(BlockSoundGroup.POWDER_SNOW)
     );
+    public static final Block CHEESE_ORE_BLOCK = registerBlock("cheese_ore_block", AbstractBlock.Settings.create()
+            .strength(0.7f)
+            .sounds(BlockSoundGroup.NETHER_GOLD_ORE)
+            .requiresTool()
+    );
+    public static final Block DEEPSLATE_CHEESE_ORE_BLOCK = registerBlock("deepslate_cheese_ore_block", AbstractBlock.Settings.create()
+            .strength(0.7f)
+            .sounds(BlockSoundGroup.DEEPSLATE)
+            .requiresTool()
+    );
+    public static final Block CHEESE_SLAB = registerSlabBlock("cheese_slab", AbstractBlock.Settings.create()
+            .strength(0.1f)
+            .sounds(BlockSoundGroup.POWDER_SNOW)
+    );
+
+    private static Block registerSlabBlock(String name, AbstractBlock.Settings blockSettings) {
+        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(BrainRotMod.MOD_ID, name));
+        Block block = new SlabBlock(blockSettings.registryKey(key));
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, key, block);
+    }
 
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(BrainRotMod.MOD_ID, name));
