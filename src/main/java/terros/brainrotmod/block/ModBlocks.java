@@ -21,12 +21,12 @@ public class ModBlocks {
             .sounds(BlockSoundGroup.POWDER_SNOW)
     );
     public static final Block CHEESE_ORE_BLOCK = registerBlock("cheese_ore_block", AbstractBlock.Settings.create()
-            .strength(0.7f)
+            .strength(1f)
             .sounds(BlockSoundGroup.NETHER_GOLD_ORE)
             .requiresTool()
     );
     public static final Block DEEPSLATE_CHEESE_ORE_BLOCK = registerBlock("deepslate_cheese_ore_block", AbstractBlock.Settings.create()
-            .strength(0.7f)
+            .strength(1f)
             .sounds(BlockSoundGroup.DEEPSLATE)
             .requiresTool()
     );

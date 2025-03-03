@@ -14,9 +14,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         super(output, registriesFuture);
     }
 
+
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.CHEESE_ORE_BLOCK)
                 .add(ModBlocks.DEEPSLATE_CHEESE_ORE_BLOCK);
     }

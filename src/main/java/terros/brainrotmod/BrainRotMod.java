@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import terros.brainrotmod.block.ModBlocks;
 import terros.brainrotmod.item.ModItemGroups;
 import terros.brainrotmod.item.ModItems;
+import terros.brainrotmod.world.gen.ModWorldGeneration;
 
 public class BrainRotMod implements ModInitializer {
 	public static final String MOD_ID = "brainrotmod";
@@ -14,6 +15,11 @@ public class BrainRotMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModWorldGeneration.generateModWorldGen();
+
+
+
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
