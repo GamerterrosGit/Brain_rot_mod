@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terros.brainrotmod.block.ModBlocks;
+import terros.brainrotmod.entity.ModEntities;
 import terros.brainrotmod.item.ModItemGroups;
 import terros.brainrotmod.item.ModItems;
 import terros.brainrotmod.world.gen.ModWorldGeneration;
@@ -18,8 +19,7 @@ public class BrainRotMod implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 
 
-
-
+		ModEntities.registerModEntities();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
