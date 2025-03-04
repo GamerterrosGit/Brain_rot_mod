@@ -2,13 +2,24 @@ package terros.brainrotmod.entity.client;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.minecraft.client.render.entity.model.ModelWithHead;
+import net.minecraft.client.render.entity.state.VillagerEntityRenderState;
+import net.minecraft.client.render.entity.state.WardenEntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.Identifier;
+import terros.brainrotmod.BrainRotMod;
 import terros.brainrotmod.entity.custom.WalterEntity;
 
-public class WalterModel<T extends WalterEntity> extends SinglePartEntityModel<T> {
+public class WalterModel<T extends WalterEntity>  extends EntityModel<WalterEntityRenderState> {
+
+    public static final EntityModelLayer WALTER = new EntityModelLayer(Identifier.of(BrainRotMod.MOD_ID, "walter"), "main");
+
     private final ModelPart walter;
     private final ModelPart head;
     public WalterModel(ModelPart root) {
+        super(root);
         this.walter = root.getChild("walter");
         this.head = this.walter.getChild("head");
     }
@@ -30,13 +41,6 @@ public class WalterModel<T extends WalterEntity> extends SinglePartEntityModel<T
 
         ModelPartData leftarm = walter.addChild("leftarm", ModelPartBuilder.create().uv(32, 48).cuboid(4.0F, -24.0F, -2.0F, 4.0F, 12.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
         return TexturedModelData.of(modelData, 64, 64);
-    }
-    @Override
-    public void setAngles(WalterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-    }
-    @Override
-    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, int color) {
-        walter.render(matrices, vertexConsumer, light, overlay, color);
     }
 
     public ModelPart getHead() {

@@ -2,10 +2,12 @@ package terros.brainrotmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terros.brainrotmod.block.ModBlocks;
 import terros.brainrotmod.entity.ModEntities;
+import terros.brainrotmod.entity.custom.WalterEntity;
 import terros.brainrotmod.item.ModItemGroups;
 import terros.brainrotmod.item.ModItems;
 import terros.brainrotmod.world.gen.ModWorldGeneration;
@@ -23,5 +25,7 @@ public class BrainRotMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+
+		FabricDefaultAttributeRegistry.register(ModEntities.WALTER, WalterEntity.createAttributes());
 	}
 }
