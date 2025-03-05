@@ -3,6 +3,7 @@
   "item.brainrotmod.cheese": "Cheese",
   "item.brainrotmod.drippy_cheese": "Drippy Cheese",
   "item.brainrotmod.feastables": "Feastables",
+  "item.brainrotmod.walter_spawn_egg": "Walter Spawn Egg",
 
 
   "item.brainrotmod.cheese_block": "Cheese Block",
@@ -15,5 +16,7 @@
   "block.brainrotmod.cheese_ore_block": "Cheese Ore",
   "block.brainrotmod.deepslate_cheese_ore_block": "Deepslate Cheese Ore",
 
-  "itemgroup.brainrotmod.brainrot_items": "Brain Rot"
+  "itemgroup.brainrotmod.brainrot_items": "Brain Rot",
+
+  "entity.brainrotmod.walter": "Walter White"
 }

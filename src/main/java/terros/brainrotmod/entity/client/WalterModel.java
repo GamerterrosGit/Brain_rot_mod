@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 import terros.brainrotmod.BrainRotMod;
 import terros.brainrotmod.entity.custom.WalterEntity;
 
+
 public class WalterModel<T extends WalterEntity>  extends EntityModel<WalterEntityRenderState> {
 
     public static final EntityModelLayer WALTER = new EntityModelLayer(Identifier.of(BrainRotMod.MOD_ID, "walter"), "main");
@@ -43,7 +44,16 @@ public class WalterModel<T extends WalterEntity>  extends EntityModel<WalterEnti
         return TexturedModelData.of(modelData, 64, 64);
     }
 
-    public ModelPart getHead() {
+    @Override
+    public void setAngles(WalterEntityRenderState state) {
+        super.setAngles(state);
+        this.getPart().traverse().forEach(ModelPart::resetTransform);
+
+        this.animateWalking(WalterAnimations.ANIM_WALTER_WALK, state.limbFrequency, state.limbAmplitudeMultiplier, 2f, 2.5f);
+        this.animate(state.idleState, WalterAnimations.ANIM_WALTER_IDLE,state.age, 1f);
+    }
+
+    public ModelPart getPart() {
         return walter;
     }
 }

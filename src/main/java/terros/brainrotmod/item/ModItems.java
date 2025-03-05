@@ -3,12 +3,14 @@ package terros.brainrotmod.item;
 import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import terros.brainrotmod.BrainRotMod;
+import terros.brainrotmod.entity.ModEntities;
 import terros.brainrotmod.item.custom.PrimeItem;
 
 public class ModItems {
@@ -27,6 +29,9 @@ public class ModItems {
             .maxCount(1)
             .food(FoodComponents.HONEY_BOTTLE, ConsumableComponents.DRINK)
     ));
+    public static final Item WALTER_SPAWN_EGG = registerCustomItem("walter_spawn_egg", new SpawnEggItem(ModEntities.WALTER, new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(BrainRotMod.MOD_ID,"walter_spawn_egg"))))
+    );
 
 
 

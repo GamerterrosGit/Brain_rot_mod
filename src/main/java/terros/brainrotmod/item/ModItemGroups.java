@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModItems.FEASTABLES);
                         entries.add(ModItems.PRIME);
 
+                        entries.add(ModItems.WALTER_SPAWN_EGG);
                     })
             .build());
 

@@ -4,9 +4,13 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.client.data.Model;
 import net.minecraft.client.data.Models;
+import net.minecraft.util.Identifier;
 import terros.brainrotmod.block.ModBlocks;
 import terros.brainrotmod.item.ModItems;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -20,7 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_CHEESE_ORE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHEESE_ORE_BLOCK);
-
+//        blockStateModelGenerator.registerGeneric(ModBlocks.WHITE_POWDER);
         cheeseBlockPool.slab(ModBlocks.CHEESE_SLAB);
     }
 
@@ -31,5 +35,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DRIPPY_CHEESE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FEASTABLES, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.WALTER_SPAWN_EGG, new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }
