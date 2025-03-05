@@ -12,6 +12,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOfferList;
@@ -31,13 +32,13 @@ public class WalterEntity extends WanderingTraderEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(1, new StopFollowingCustomerGoal(this));
-        this.goalSelector.add(1, new FleeEntityGoal(this, ZombieEntity.class, 8.0F, 0.5, 2));
-        this.goalSelector.add(1, new FleeEntityGoal(this, EvokerEntity.class, 12.0F, 0.5, 2));
-        this.goalSelector.add(1, new FleeEntityGoal(this, VindicatorEntity.class, 8.0F, 0.5, 2));
-        this.goalSelector.add(1, new FleeEntityGoal(this, VexEntity.class, 8.0F, 0.5, 2));
-        this.goalSelector.add(1, new FleeEntityGoal(this, PillagerEntity.class, 15.0F, 0.5, 2));
-        this.goalSelector.add(1, new FleeEntityGoal(this, IllusionerEntity.class, 12.0F, 0.5, 2));
-        this.goalSelector.add(1, new FleeEntityGoal(this, ZoglinEntity.class, 10.0F, 0.5, 2));
+        this.goalSelector.add(1, new FleeEntityGoal<>(this, ZombieEntity.class, 8.0F, 0.5, 2));
+        this.goalSelector.add(1, new FleeEntityGoal<>(this, EvokerEntity.class, 12.0F, 0.5, 2));
+        this.goalSelector.add(1, new FleeEntityGoal<>(this, VindicatorEntity.class, 8.0F, 0.5, 2));
+        this.goalSelector.add(1, new FleeEntityGoal<>(this, VexEntity.class, 8.0F, 0.5, 2));
+        this.goalSelector.add(1, new FleeEntityGoal<>(this, PillagerEntity.class, 15.0F, 0.5, 2));
+        this.goalSelector.add(1, new FleeEntityGoal<>(this, IllusionerEntity.class, 12.0F, 0.5, 2));
+        this.goalSelector.add(1, new FleeEntityGoal<>(this, ZoglinEntity.class, 10.0F, 0.5, 2));
         this.goalSelector.add(1, new EscapeDangerGoal(this, 2));
         this.goalSelector.add(1, new LookAtCustomerGoal(this));
         this.goalSelector.add(4, new GoToWalkTargetGoal(this, 0.35));
@@ -93,10 +94,6 @@ public class WalterEntity extends WanderingTraderEntity {
         tradeOfferList.add(customTrade);
 
     }
-//    public static boolean isValidNaturalSpawn(EntityType<? extends WalterEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
-//        boolean bl = SpawnReason.isTrialSpawner(spawnReason);
-//        return world.getBlockState(pos.down()).isIn(BlockTags.ANIMALS_SPAWNABLE_ON) && bl;
-//    }
 
     @Override
     public void tick() {
@@ -105,6 +102,23 @@ public class WalterEntity extends WanderingTraderEntity {
         if(this.getWorld().isClient()) {
             this.setupAnimationStates();
         }
+    }
+
+    /*Sounds*/
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return null;
+    }
+
+    @Override
+    protected SoundEvent getTradingSound(boolean sold) {
+        return sold ? SoundEvents.ENTITY_VILLAGER_YES : SoundEvents.ENTITY_VILLAGER_NO;
+    }
+
+    @Override
+    public SoundEvent getYesSound() {
+        return SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP;
     }
 
 }

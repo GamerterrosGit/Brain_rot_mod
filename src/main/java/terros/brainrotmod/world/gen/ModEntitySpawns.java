@@ -9,7 +9,6 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.BiomeKeys;
 import terros.brainrotmod.entity.ModEntities;
-import terros.brainrotmod.entity.custom.WalterEntity;
 
 public class ModEntitySpawns {
     public static void addSpawns() {
