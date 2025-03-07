@@ -4,7 +4,7 @@
   "biomes": "#brainrotmod:has_structure/cheese_house_top",
   "step": "surface_structures",
   "spawn_overrides": {},
-  "start_pool": "brainrotmod:cheese_house_pool",
+  "start_pool": "brainrotmod:mcfc_main_pool",
   "size": 1,
   "terrain_adaptation": "beard_thin",
   "start_height": {

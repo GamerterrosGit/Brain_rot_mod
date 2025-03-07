@@ -1,7 +1,7 @@
 {
   "structures": [
     {
-      "structure": "brainrotmod:cheese_house",
+      "structure": "brainrotmod:mcfc",
       "weight": 1
     }
 
@@ -10,6 +10,6 @@
     "type": "minecraft:random_spread",
     "spacing": 50,
     "separation": 15,
-    "salt": 1646207470
+    "salt": 1646205937
   }
 }

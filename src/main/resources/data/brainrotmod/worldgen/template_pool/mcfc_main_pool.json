@@ -1,11 +1,11 @@
 {
-  "name": "brainrotmod:cheese_house_pool",
+  "name": "brainrotmod:mcfc_main_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "brainrotmod:cheese_house_top",
+        "location": "brainrotmod:mcfc_main",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
