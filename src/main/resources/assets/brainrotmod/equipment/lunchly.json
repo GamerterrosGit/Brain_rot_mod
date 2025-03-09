@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "brainrotmod:lunchly"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "brainrotmod:lunchly"
+      }
+    ]
+  }
+}

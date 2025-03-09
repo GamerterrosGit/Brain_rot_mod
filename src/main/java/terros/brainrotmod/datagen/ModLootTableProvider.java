@@ -17,7 +17,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.CHEESE_BLOCK);
         addDrop(ModBlocks.CHEESE_SLAB, slabDrops(ModBlocks.CHEESE_SLAB));
-//        addDrop(ModBlocks.WHITE_POWDER);
 
         addDrop(ModBlocks.CHEESE_ORE_BLOCK);
         addDrop(ModBlocks.DEEPSLATE_CHEESE_ORE_BLOCK);

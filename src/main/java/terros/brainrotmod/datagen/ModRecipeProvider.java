@@ -41,6 +41,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("CCC")
                         .criterion(hasItem(Items.COCOA_BEANS), conditionsFromItem(Items.COCOA_BEANS))
                         .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.LUNCHLY)
+                        .input('A', ModItems.DRIPPY_CHEESE)
+                        .input('B', ModItems.PRIME)
+                        .input('C', ModItems.FEASTABLES)
+                        .input('E', Items.PAPER)
+                        .pattern("EEE")
+                        .pattern("BAC")
+                        .pattern("EEE")
+                        .criterion(hasItem(ModItems.PRIME), conditionsFromItem(ModItems.PRIME))
+                        .criterion(hasItem(ModItems.FEASTABLES), conditionsFromItem(ModItems.FEASTABLES))
+                        .criterion(hasItem(ModItems.DRIPPY_CHEESE), conditionsFromItem(ModItems.DRIPPY_CHEESE))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.BRAINROT_HELMET)
+                        .input('A', Items.NETHERITE_HELMET)
+                        .input('B', ModItems.LUNCHLY)
+                        .pattern("AB")
+                        .criterion(hasItem(ModItems.LUNCHLY), conditionsFromItem(ModItems.LUNCHLY))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.BRAINROT_CHESTPLATE)
+                        .input('A', Items.NETHERITE_CHESTPLATE)
+                        .input('B', ModItems.LUNCHLY)
+                        .pattern("AB")
+                        .criterion(hasItem(ModItems.LUNCHLY), conditionsFromItem(ModItems.LUNCHLY))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.BRAINROT_LEGGINGS)
+                        .input('A', Items.NETHERITE_LEGGINGS)
+                        .input('B', ModItems.LUNCHLY)
+                        .pattern("AB")
+                        .criterion(hasItem(ModItems.LUNCHLY), conditionsFromItem(ModItems.LUNCHLY))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.MISC, ModItems.BRAINROT_BOOTS)
+                        .input('A', Items.NETHERITE_BOOTS)
+                        .input('B', ModItems.LUNCHLY)
+                        .pattern("AB")
+                        .criterion(hasItem(ModItems.LUNCHLY), conditionsFromItem(ModItems.LUNCHLY))
+                        .offerTo(exporter);
 
                 offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHEESE_SLAB, ModBlocks.CHEESE_BLOCK);
             }

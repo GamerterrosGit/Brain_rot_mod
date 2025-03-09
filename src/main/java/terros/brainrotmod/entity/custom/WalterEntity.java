@@ -89,7 +89,7 @@ public class WalterEntity extends WanderingTraderEntity {
     @Override
     protected void fillRecipes() {
 
-        TradeOffer customTrade = new TradeOffer(new TradedItem(Items.EMERALD, 32) , new ItemStack(ModItems.PRIME, 6), 10, 2, 0.04f);
+        TradeOffer customTrade = new TradeOffer(new TradedItem(Items.EMERALD, 32) , new ItemStack(ModItems.WHITE_POWDER, 6), 10, 2, 0.04f);
         TradeOfferList tradeOfferList = this.getOffers();
         tradeOfferList.add(customTrade);
 

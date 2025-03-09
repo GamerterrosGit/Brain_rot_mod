@@ -1,7 +1,6 @@
 package terros.brainrotmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.client.tutorial.TutorialManager;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -26,6 +25,13 @@ public class ModItemGroups {
                         entries.add(ModItems.CHEESE);
                         entries.add(ModItems.FEASTABLES);
                         entries.add(ModItems.PRIME);
+                        entries.add(ModItems.LUNCHLY);
+                        entries.add(ModItems.WHITE_POWDER);
+
+                        entries.add(ModItems.BRAINROT_HELMET);
+                        entries.add(ModItems.BRAINROT_CHESTPLATE);
+                        entries.add(ModItems.BRAINROT_LEGGINGS);
+                        entries.add(ModItems.BRAINROT_BOOTS);
 
                         entries.add(ModItems.WALTER_SPAWN_EGG);
                     })

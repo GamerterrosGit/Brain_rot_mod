@@ -1,10 +1,16 @@
 {
   "item.brainrotmod.prime" : "Prime",
+  "item.brainrotmod.lunchly" : "Lunchly",
   "item.brainrotmod.cheese": "Cheese",
   "item.brainrotmod.drippy_cheese": "Drippy Cheese",
   "item.brainrotmod.feastables": "Feastables",
+  "item.brainrotmod.white_powder": "Cocaine",
   "item.brainrotmod.walter_spawn_egg": "Walter Spawn Egg",
 
+  "item.brainrotmod.brainrot_helmet": "Brainrot Helmet",
+  "item.brainrotmod.brainrot_chestplate": "Brainrot Chestplate",
+  "item.brainrotmod.brainrot_leggings": "Brainrot Leggings",
+  "item.brainrotmod.brainrot_boots": "Brainrot Boots",
 
   "item.brainrotmod.cheese_block": "Cheese Block",
   "item.brainrotmod.cheese_slab": "Cheese Slab",
