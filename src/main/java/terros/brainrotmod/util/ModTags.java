@@ -18,6 +18,8 @@ public class ModTags {
     public static class Items {
 
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+        public static final TagKey<Item> LUNCHLY_REPAIR = createTag("lunchly_repair");
+        public static final TagKey<Item> BRAINROT_ARMOR = createTag("lunchly_repair");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(BrainRotMod.MOD_ID, name));
